@@ -1,0 +1,39 @@
+<p class="dash">home works!</p>
+
+<div class="container">
+
+    <form [formGroup]="addForm" (ngSubmit)="AddUserData(addForm.value)">
+        <label>Enter User ID</label>
+        <input type="text" formControlName="userId">
+        <label for="">Enter Title</label>
+        <input type="text" formControlName="title">
+        <label for="">Enter ID</label>
+        <input type="text" formControlName="id">
+        <label for="">Enter status</label>
+        <input type="text" formControlName="completed">
+    
+        <button type="submit">Submit</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>USER ID</th>
+                <th>TITLE</th>
+                <th>ID</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr
+                *ngFor="let item of userdata | paginate: { itemsPerPage: 10, currentPage: currrentPageNo, totalItems: totalRecords }">
+                <td>{{item.id}}</td>
+                <td>{{item.title}}</td>
+                <td>{{item.userId}}</td>
+                <td>{{item.completed}}</td>
+            </tr>
+    
+        </tbody>
+    </table>
+</div>
+
+<pagination-controls class="pagination" (pageChange)=" currrentPageNo = $event"></pagination-controls>

@@ -1,0 +1,45 @@
+.dash {
+    text-align: center;
+    font-size: 50px;
+    background-color: black;
+    color: wheat;
+}
+table{
+    border: 2px black solid;
+    margin: 5px;
+}
+td{
+    border: 2px solid black;
+}
+label,input{
+    width: 100%;
+}
+input{
+    padding: 2px;
+    margin: 2px 0;
+}
+form{
+    padding: 4px;
+    width: 280px;
+}
+button{
+    padding: 3px;
+    margin: 2px 0;
+    width: 100%;
+    background: blue;
+    color: white;
+    border: none;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pagination{
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+}
